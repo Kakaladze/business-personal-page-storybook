@@ -13,6 +13,9 @@ interface NavbarProps {
     items: NavItem[];
     activePath?: string;
     onItemClick?: (path: string) => void;
+    avatarSrc: string;
+    name: string;
+    title: string;
 }
 
 const NavItem = styled.button<{ active: boolean}>(({ theme: { space, colors }, active }) => ({
@@ -58,7 +61,7 @@ const Nav = styled.nav({
      }
 })
 
-export const Navbar = ({ items, activePath, onItemClick }: NavbarProps) => {
+export const Navbar = ({ items, activePath, onItemClick, avatarSrc, name, title }: NavbarProps) => {
     const navRef = useRef<HTMLDivElement>(null);
     const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
     const [visibleCount, setVisibleCount] = useState(items.length);
@@ -132,6 +135,6 @@ export const Navbar = ({ items, activePath, onItemClick }: NavbarProps) => {
         {hiddenItems.length > 0 && (
             <BurgerButton ml="auto" open={isOpen} onClick={() => setIsOpen(true)}/>
         )}
-        <SideMenu isOpen={isOpen} onClose={() => setIsOpen(false)} items={hiddenItems}/>
+        <SideMenu name={name} title={title} avatarSrc={avatarSrc} isOpen={isOpen} onClose={() => setIsOpen(false)} items={hiddenItems}/>
     </Nav>
 }

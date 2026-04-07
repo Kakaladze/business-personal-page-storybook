@@ -12,6 +12,8 @@ export const theme = {
 
     // text
     text: {
+        accent: '#22c55e',
+        accentSecond: '#15803D',
         textPrimary: '#e5e7eb',
         textSecondary: '#9ca3af',
         textMuted: '#6b7280',

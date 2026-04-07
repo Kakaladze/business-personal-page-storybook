@@ -1,19 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Navbar } from '../components/Navbar';
 import React from 'react';
+import avatarImg from './assets/mockImageReady.png';
 
 const meta = {
   title: 'Components/Navbar',
   component: Navbar,
   tags: ['autodocs'],
-decorators: [
-    (Story) => (
-      <div style={{ background: '#0b1220', height: '700px', width: '100%', boxSizing: 'border-box' }}>
-        <Story />
-      </div>
-    ),
-  ],
-} satisfies Meta<typeof Navbar>;
+  decorators: [
+      (Story) => (
+        <div style={{ background: '#0b1220', height: '700px', width: '100%', boxSizing: 'border-box' }}>
+          <Story />
+        </div>
+      ),
+    ],
+  } satisfies Meta<typeof Navbar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,6 +23,9 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
+    name: 'Jan Kowalski',
+    title: 'Fullstack Developer',
+    avatarSrc: avatarImg,
     activePath: '/',
     items: [
       { label: "Start", path: "/" },
@@ -41,6 +45,9 @@ export const Primary: Story = {
 
 export const Overloaded: Story = {
   args: {
+    name: 'Jan Kowalski',
+    title: 'Fullstack Developer',
+    avatarSrc: avatarImg,
     activePath: '/',
     items: [
       { label: "Start", path: "/" },
