@@ -18,3 +18,6 @@ export const Flex = styled.div<FlexProps>(
   space,
   layout
 );
+
+type Box = SpaceProps & LayoutProps
+export const Box = styled.div<Box>({}, space, layout)

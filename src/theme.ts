@@ -17,7 +17,7 @@ export const theme = {
         textMuted: '#6b7280',
     },
     // borders / UI
-    border: '#1E293B',
+    border: '#3C4C66',
     borderHover: '#4b5563',
 
     // optional extras

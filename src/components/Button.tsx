@@ -16,10 +16,8 @@ const ButtonElement = styled.button<{primary: boolean, fullWidth: boolean}>({
       :`linear-gradient(225deg, ${colors.border} 0%, ${colors.primary} 100%)`,
 
     "&:active": {
-      transform: "translateY(1px)",
       boxShadow: `
-        0 2px 6px #00000066,
-        inset 0 2px 4px #00000066
+        inset 0 3px 6px #00000066
       `,
     },
 
