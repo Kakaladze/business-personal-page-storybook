@@ -20,6 +20,8 @@ export const theme = {
     border: '#3C4C66',
     borderHover: '#4b5563',
 
+    activeItem: '#3b82f6',
+
     // optional extras
     overlay: 'rgba(15, 23, 42, 0.8)',
     accentGlow: 'rgba(34, 197, 94, 0.2)',

@@ -10,9 +10,6 @@ const meta = {
     (Story) => (
       <div style={{ background: '#0b1220' }}>
         <Story />
-                <Story />
-        <Story />
-
       </div>
     ),
   ],
@@ -22,7 +19,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
     headerText: 'Hello World',
